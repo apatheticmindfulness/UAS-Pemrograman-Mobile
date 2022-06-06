@@ -1,10 +1,10 @@
-package com.example.uas_mobile.ui.gallery
+package com.example.uas_mobile.ui.disney
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class GalleryViewModel : ViewModel() {
+class DisneyViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is gallery Fragment"
