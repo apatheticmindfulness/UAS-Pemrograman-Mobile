@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.example.uas_mobile.databinding.FragmentDisneyBinding
 
@@ -13,8 +14,7 @@ import com.example.uas_mobile.databinding.FragmentDisneyBinding
 class DisneyFragment : Fragment() {
 
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+    private val viewModel: DisneyViewModel by viewModels()
 
 
     override fun onCreateView(
@@ -23,7 +23,8 @@ class DisneyFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val binding = FragmentDisneyBinding.inflate(inflater)
-
+        binding.lifecycleOwner = this
+        binding.viewModel = viewModel
         return binding.root
     }
 
