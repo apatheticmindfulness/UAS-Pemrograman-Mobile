@@ -6,7 +6,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
-private const val BASE_URL = "https://api.disneyapi.dev/"
+//private const val BASE_URL = "https://api.disneyapi.dev/"
+private const val BASE_URL = "https://thronesapi.com/"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
@@ -18,7 +19,7 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface DisneyApiService {
-    @GET("characters")
+    @GET("/api/v2/Characters")
     suspend fun getPhotos(): List<DisneyPhoto>
 }
 

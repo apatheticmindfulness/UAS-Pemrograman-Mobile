@@ -25,6 +25,7 @@ class DisneyFragment : Fragment() {
         val binding = FragmentDisneyBinding.inflate(inflater)
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
+        binding.photosGrid.adapter = PhotoGridAdapter()
         return binding.root
     }
 

@@ -1,11 +1,14 @@
 package com.example.uas_mobile.network
 
-data class DisneyPhoto(
-    val films: Array<String>,
-    val shortFilms: Array<String>, val tvShows: Array<String>,
-    val videoGames: Array<String>, val parkAttractions: Array<String>,
-    val allies: Array<String>, val enemies: Array<String>,
-    val _id: Int, val name: String, val imageUrl: String,
-    val url: String,
+import java.util.*
 
+data class DisneyPhoto(
+    val id: Int,
+    val firstName: String,
+    val lastName: String,
+    val fullName: String,
+    val title: String,
+    val family: String,
+    val image: String,
+    val imageUrl: String
     )
