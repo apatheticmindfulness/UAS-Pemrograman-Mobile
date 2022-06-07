@@ -20,7 +20,7 @@ private val retrofit = Retrofit.Builder()
 
 interface DisneyApiService {
     @GET("/api/v2/Characters")
-    suspend fun getPhotos(): List<GameofThronesData>
+    suspend fun getPhotos(): List<GameOfThronesData>
 }
 
 object DisneyApi {

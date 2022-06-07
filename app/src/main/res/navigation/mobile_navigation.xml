@@ -14,12 +14,12 @@
     <fragment
         android:id="@+id/nav_gallery"
         android:name="com.example.uas_mobile.ui.gameOfThrones.GameOfThronesFragment"
-        android:label="@string/menu_gallery"
+        android:label="@string/menu_game_of_thrones"
         tools:layout="@layout/fragment_game_of_thrones" />
 
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.example.uas_mobile.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/menu_breaking_bad"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>
