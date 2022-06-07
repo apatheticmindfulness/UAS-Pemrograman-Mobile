@@ -20,7 +20,7 @@ private val retrofit = Retrofit.Builder()
 
 interface DisneyApiService {
     @GET("/api/v2/Characters")
-    suspend fun getPhotos(): List<DisneyPhoto>
+    suspend fun getPhotos(): List<GameofThronesData>
 }
 
 object DisneyApi {
@@ -32,7 +32,7 @@ object DisneyApi {
 
 private val retrofit2 = Retrofit.Builder()
     .addConverterFactory(MoshiConverterFactory.create(moshi))
-    .baseUrl(BASE_URL)
+    .baseUrl(BASE_URL2)
     .build()
 
 
@@ -43,5 +43,5 @@ interface DisneyApiService2 {
 
 object DisneyApi2 {
     val retrofitService : DisneyApiService2 by lazy {
-        retrofit.create(DisneyApiService2::class.java) }
+        retrofit2.create(DisneyApiService2::class.java) }
 }

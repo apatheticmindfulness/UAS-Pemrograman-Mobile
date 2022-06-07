@@ -5,7 +5,7 @@
     <data>
         <variable
             name="photo"
-            type="com.example.uas_mobile.network.DisneyPhoto" />
+            type="com.example.uas_mobile.network.GameOfThronesData" />
     </data>
     <ImageView
         android:id="@+id/mars_image"

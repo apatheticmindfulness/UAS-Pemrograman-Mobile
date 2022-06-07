@@ -1,20 +1,18 @@
-package com.example.uas_mobile.ui.disney
+package com.example.uas_mobile.ui.gameOfThrones
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
-import com.example.uas_mobile.databinding.FragmentDisneyBinding
+import com.example.uas_mobile.databinding.FragmentGameOfThronesBinding
 
 
-class DisneyFragment : Fragment() {
+class GameOfThronesFragment : Fragment() {
 
 
-    private val viewModel: DisneyViewModel by viewModels()
+    private val viewModel: GameOfThronesViewModel by viewModels()
 
 
     override fun onCreateView(
@@ -22,7 +20,7 @@ class DisneyFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding = FragmentDisneyBinding.inflate(inflater)
+        val binding = FragmentGameOfThronesBinding.inflate(inflater)
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
         binding.photosGrid.adapter = PhotoGridAdapter()

@@ -7,7 +7,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.uas_mobile.network.BreakingBadPhoto
 import com.example.uas_mobile.network.DisneyApi
 import com.example.uas_mobile.network.DisneyApi2
-import com.example.uas_mobile.network.DisneyPhoto
 import kotlinx.coroutines.launch
 
 class SlideshowViewModel : ViewModel() {

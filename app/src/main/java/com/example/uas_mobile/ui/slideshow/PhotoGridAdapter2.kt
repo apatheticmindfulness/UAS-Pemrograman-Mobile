@@ -1,4 +1,4 @@
-package com.example.uas_mobile.ui.disney
+package com.example.uas_mobile.ui.gameOfThrones
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,9 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uas_mobile.databinding.GridViewItem2Binding
-import com.example.uas_mobile.databinding.GridViewItemBinding
 import com.example.uas_mobile.network.BreakingBadPhoto
-import com.example.uas_mobile.network.DisneyPhoto
 
 class PhotoGridAdapter2 :
     ListAdapter<BreakingBadPhoto, PhotoGridAdapter2.MarsPhotosViewHolder2>(DiffCallback) {

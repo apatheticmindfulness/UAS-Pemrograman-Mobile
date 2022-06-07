@@ -7,16 +7,15 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.uas_mobile.network.BreakingBadPhoto
-import com.example.uas_mobile.network.DisneyPhoto
-import com.example.uas_mobile.ui.disney.DisneyViewModel.DisneyApiStatus
-import com.example.uas_mobile.ui.disney.PhotoGridAdapter
-import com.example.uas_mobile.ui.disney.PhotoGridAdapter2
-import com.example.uas_mobile.ui.slideshow.SlideshowViewModel
+import com.example.uas_mobile.network.GameOfThronesData
+import com.example.uas_mobile.ui.gameOfThrones.GameOfThronesViewModel.DisneyApiStatus
+import com.example.uas_mobile.ui.gameOfThrones.PhotoGridAdapter
+import com.example.uas_mobile.ui.gameOfThrones.PhotoGridAdapter2
 import com.example.uas_mobile.ui.slideshow.SlideshowViewModel.DisneyApiStatus2
 
 @BindingAdapter("listData")
 fun bindRecyclerView(recyclerView: RecyclerView,
-                     data: List<DisneyPhoto>?) {
+                     data: List<GameOfThronesData>?) {
     val adapter = recyclerView.adapter as PhotoGridAdapter
     adapter.submitList(data)
 }

@@ -8,13 +8,13 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.uas_mobile.ui.disney.DisneyViewModel" />
+            type="com.example.uas_mobile.ui.gameOfThrones.GameOfThronesViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.disney.DisneyFragment">
+        tools:context=".ui.gameOfThrones.GameOfThronesFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/photos_grid"

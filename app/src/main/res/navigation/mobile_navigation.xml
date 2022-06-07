@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.uas_mobile.ui.disney.DisneyFragment"
+        android:name="com.example.uas_mobile.ui.gameOfThrones.GameOfThronesFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_disney" />
+        tools:layout="@layout/fragment_game_of_thrones" />
 
     <fragment
         android:id="@+id/nav_slideshow"

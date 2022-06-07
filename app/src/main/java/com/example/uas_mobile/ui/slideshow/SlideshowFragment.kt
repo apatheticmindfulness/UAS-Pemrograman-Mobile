@@ -4,14 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
-import com.example.uas_mobile.databinding.FragmentHomeBinding
 import com.example.uas_mobile.databinding.FragmentSlideshowBinding
-import com.example.uas_mobile.ui.disney.DisneyViewModel
-import com.example.uas_mobile.ui.disney.PhotoGridAdapter2
+import com.example.uas_mobile.ui.gameOfThrones.PhotoGridAdapter2
 
 class SlideshowFragment : Fragment() {
 

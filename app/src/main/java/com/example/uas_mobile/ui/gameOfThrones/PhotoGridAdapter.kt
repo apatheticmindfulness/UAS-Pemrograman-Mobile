@@ -1,4 +1,4 @@
-package com.example.uas_mobile.ui.disney
+package com.example.uas_mobile.ui.gameOfThrones
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,10 +6,10 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uas_mobile.databinding.GridViewItemBinding
-import com.example.uas_mobile.network.DisneyPhoto
+import com.example.uas_mobile.network.GameOfThronesData
 
 class PhotoGridAdapter :
-    ListAdapter<DisneyPhoto, PhotoGridAdapter.MarsPhotosViewHolder>(DiffCallback) {
+    ListAdapter<GameOfThronesData, PhotoGridAdapter.MarsPhotosViewHolder>(DiffCallback) {
 
     /**
      * The MarsPhotosViewHolder constructor takes the binding variable from the associated
@@ -18,7 +18,7 @@ class PhotoGridAdapter :
     class MarsPhotosViewHolder(
         private var binding: GridViewItemBinding
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(marsPhoto: DisneyPhoto) {
+        fun bind(marsPhoto: GameOfThronesData) {
             binding.photo = marsPhoto
             // This is important, because it forces the data binding to execute immediately,
             // which allows the RecyclerView to make the correct view size measurements
@@ -30,12 +30,12 @@ class PhotoGridAdapter :
      * Allows the RecyclerView to determine which items have changed when the [List] of
      * [MarsPhoto] has been updated.
      */
-    companion object DiffCallback : DiffUtil.ItemCallback<DisneyPhoto>() {
-        override fun areItemsTheSame(oldItem: DisneyPhoto, newItem: DisneyPhoto): Boolean {
+    companion object DiffCallback : DiffUtil.ItemCallback<GameOfThronesData>() {
+        override fun areItemsTheSame(oldItem: GameOfThronesData, newItem: GameOfThronesData): Boolean {
             return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(oldItem: DisneyPhoto, newItem: DisneyPhoto): Boolean {
+        override fun areContentsTheSame(oldItem: GameOfThronesData, newItem: GameOfThronesData): Boolean {
             return oldItem.imageUrl == newItem.imageUrl
         }
     }

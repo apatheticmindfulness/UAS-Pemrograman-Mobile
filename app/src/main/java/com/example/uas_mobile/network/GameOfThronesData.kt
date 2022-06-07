@@ -2,7 +2,7 @@ package com.example.uas_mobile.network
 
 import java.util.*
 
-data class DisneyPhoto(
+data class GameOfThronesData(
     val id: Int,
     val firstName: String,
     val lastName: String,
