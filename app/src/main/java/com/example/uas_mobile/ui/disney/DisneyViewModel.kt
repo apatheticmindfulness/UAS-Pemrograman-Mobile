@@ -10,25 +10,27 @@ import kotlinx.coroutines.launch
 
 class DisneyViewModel : ViewModel() {
 
-    private val _status = MutableLiveData<String>()
     private val _photos = MutableLiveData<List<DisneyPhoto>>()
     val photos: LiveData<List<DisneyPhoto>> = _photos
 
-    // The external immutable LiveData for the request status
-    val status: LiveData<String> = _status
+    private val _status = MutableLiveData<DisneyApiStatus>()
+    val status: LiveData<DisneyApiStatus> = _status
 
     init {
         getMarsPhotos()
     }
 
+    enum class DisneyApiStatus { LOADING, ERROR, DONE }
 
     private fun getMarsPhotos() {
         viewModelScope.launch {
+            _status.value = DisneyApiStatus.LOADING
             try {
-                val listResult = DisneyApi.retrofitService.getPhotos()
                 _photos.value = DisneyApi.retrofitService.getPhotos()
+                _status.value = DisneyApiStatus.DONE
             } catch (e: Exception) {
-                _status.value = "Failure: ${e.message}"
+                _status.value = DisneyApiStatus.ERROR
+                _photos.value = listOf()
             }
         }
     }
