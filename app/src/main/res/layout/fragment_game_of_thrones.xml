@@ -8,13 +8,13 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.uas_mobile.ui.slideshow.SlideshowViewModel" />
+            type="com.example.uas_mobile.ui.gameOfThrones.GameOfThronesViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.slideshow.SlidesShowFragment">
+        tools:context=".ui.gameOfThrones.GameOfThronesFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/photos_grid"
@@ -30,7 +30,7 @@
             app:spanCount="2"
             tools:itemCount="16"
             tools:listitem="@layout/grid_view_item"
-            app:listData2="@{viewModel.photos}"
+            app:listData="@{viewModel.photos}"
             android:clipToPadding="false"/>
 
         <ImageView
@@ -41,7 +41,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:disneyApiStatus2="@{viewModel.status}" />
+            app:disneyApiStatus="@{viewModel.status}" />
 
 
 
